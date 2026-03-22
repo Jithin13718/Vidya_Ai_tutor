@@ -70,7 +70,6 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 | Cost per query | ~0.0018 | ~0.00017 | 
 | **Token reduction** | — | **85–92%** |
 
-
 ---
 
 ## 📁 Repository ConfigurationThe entire online application (one file, open in browser) may be found at vidya/
