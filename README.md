@@ -23,13 +23,12 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 ## 🚀 How to Use
 
 ### Web App (`education_tutor.html`)
+1. Visit [console.groq.com](https://console.groq.com) to obtain a free Groq API key. 2. Launch `index.html` in any contemporary browser (Chrome, Firefox, Edge).
 
-1. **Get a free Groq API key** at [console.groq.com](https://console.groq.com)
-2. Open `index.html` in any modern browser (Chrome, Firefox, Edge)
-3. Enter your Groq API key and click **Save**
-4. Upload your PDF textbook
-5. Wait ~1–2 minutes for OCR to extract text from all chapters (one-time setup)
-6. Ask any question — answers are instant after setup!
+3. Click **Save** after entering your Groq API key.
+4. Upload your textbook in PDF format.
+5. Give OCR a minute or two to extract text from every chapter (one-time setup).
+6. After setup, you can ask any question and receive immediate responses! Because text is extracted using Tesseract.js OCR rather than native PDF text parsing, it works with any PDF, including those with faulty font encoding (such as NCERT textbooks).
 
 > **Works with any PDF** — including PDFs with broken font encoding (like NCERT textbooks), because text is extracted using Tesseract.js OCR, not native PDF text parsing.
 
