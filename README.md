@@ -6,7 +6,11 @@
 
 ## 🌿 What is Vidya?
 
-Vidya is a two-part project: | File | What it is | |------|-----------| | `index.html` | A single-file web application that allows you to upload any PDF text---
+Vidya is a two-part project:
+| File | What it is | 
+|------|-----------| 
+| `index.html` | A single-file web application that allows you to upload any PDF text---
+|'context_purning_rag.ipynb'| A google colab will implement the this file that is ragpipeline with cost comparison|
 ---
 
 ## 🧠 The Core Technique: Context Pruning
