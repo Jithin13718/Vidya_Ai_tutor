@@ -63,11 +63,17 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 ---
 
 ## 📊 Cost Comparison Metric 
+
 | Baseline RAG | Context Pruning | 
+
 |--------|-------------|----------------| 
+
 | Tokens per query | ~40,000 | ~3,000 | 
+
 | Data per query | ~160 KB | ~12 KB | 
+
 | Cost per query | ~0.0018 | ~0.00017 | 
+
 | **Token reduction** | — | **85–92%** |
 
 ---
