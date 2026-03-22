@@ -83,7 +83,7 @@ Answer from your actual textbook
 |--------|-------------|----------------|
 | Tokens per query | ~40,000 | ~3,000 |
 | Data per query | ~160 KB | ~12 KB |
-| Cost per query | ~$0.000200 | ~$0.000015 |
+| Cost per query | ~0.018 | ~0.00139 |
 | **Token reduction** | — | **85–92%** |
 
 ---
@@ -92,7 +92,7 @@ Answer from your actual textbook
 
 ```
 vidya/
-├── education_tutor.html      ← Complete web app (single file, open in browser)
+├── index.html      ← Complete web app (single file, open in browser)
 ├── context_pruning_rag.ipynb ← Google Colab notebook with cost comparison
 └── README.md
 ```
