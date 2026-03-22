@@ -102,7 +102,6 @@ For hundreds of searches, Groq's free tier is adequate. Paste it into the web ap
 ---
 
 ## 📖 How Chapters Are Scored by Context Pruning
-
 python 
 for every chapter: 
     score = 0
