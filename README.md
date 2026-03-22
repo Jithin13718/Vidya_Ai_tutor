@@ -1,6 +1,6 @@
-# 📚 Vidya — AI Tutor for Rural India
+# 📚 Vidya: AI Instructor for India's Rural Areas
 
-> An intelligent tutoring system using **Context Pruning** to reduce LLM token usage by 85–92%, making AI-powered education viable on 2G networks.
+> AI-powered schooling is feasible over 2G networks thanks to an intelligent teaching system that uses **Context Pruning** to cut LLM token usage by 85–92%.
 
 ---
 
