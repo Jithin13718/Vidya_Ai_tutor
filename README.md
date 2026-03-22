@@ -34,12 +34,11 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 
 ### Colab Notebook (`context_pruning_rag.ipynb`)
 
-1. Open in [Google Colab](https://colab.research.google.com)
-2. Run all cells in order
-3. Upload your PDF when prompted
-4. The notebook runs **both** the baseline RAG and Context Pruning systems on test questions
-5. A cost summary table shows the token and cost savings
-
+1. Launch [Google Colab] (https://colab.research.google.com).
+2. Execute every cell sequentially
+3. When asked, upload your PDF.
+4. On test questions, the notebook uses **both** the baseline RAG and Context Pruning methods.
+5. The token and cost savings are displayed in a cost summary table.
 ---
 
 ## ⚙️ Technologies Used
