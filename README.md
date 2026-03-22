@@ -49,7 +49,7 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 |-----------|---------| 
 | **PDF.js** (Mozilla) | Renders PDF documents to Canvas in the browser | 
 | **Tesseract.js v5** | Browser-based OCR engine (WebAssembly) — reads pages visually, avoids broken fonts | 
-| **Groq API** + `llama-3.1-8b-instant` | Quick, inexpensive LLM for producing replies from text | 
+| **Groq API**  | Quick, inexpensive LLM for producing replies from text | 
 | Plain HTML / CSS / JS | No frameworks, no build tools, no server required | 
 
 ### Colab Notebook 
