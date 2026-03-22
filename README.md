@@ -73,9 +73,12 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 ---
 
 ## 📁 Repository ConfigurationThe entire online application (one file, open in browser) may be found at vidya/
--> education_tutor.html.
+-> education_tutor.html
+
 -> context_pruning_rag.ipynb Google Colab laptop with price comparison
+
 ->README.md ```
+
 ->requirements.txt
 
 ---
