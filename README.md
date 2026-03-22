@@ -44,81 +44,76 @@ Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,
 ## ⚙️ Technologies Used
 
 ### Web App
-| Technology | Purpose |
-|-----------|---------|
-| **PDF.js** (Mozilla) | Renders PDF pages to Canvas in the browser |
-| **Tesseract.js v5** | Browser-based OCR engine (WebAssembly) — reads pages visually, bypasses broken fonts |
-| **Groq API** + `llama-3.1-8b-instant` | Fast, cheap LLM for generating answers from text |
-| Plain HTML / CSS / JS | No frameworks, no build tools, no server needed |
 
-### Colab Notebook
-| Technology | Purpose |
-|-----------|---------|
-| **LangChain** | RAG pipeline framework |
-| **pdfplumber** | PDF text extraction |
-| **FAISS** | Vector store for baseline RAG |
-| **HuggingFace Embeddings** | `sentence-transformers/all-MiniLM-L6-v2` |
+| Technology | Goal | 
+|-----------|---------| 
+| **PDF.js** (Mozilla) | Renders PDF documents to Canvas in the browser | 
+| **Tesseract.js v5** | Browser-based OCR engine (WebAssembly) — reads pages visually, avoids broken fonts | 
+| **Groq API** + `llama-3.1-8b-instant` | Quick, inexpensive LLM for producing replies from text | 
+| Plain HTML / CSS / JS | No frameworks, no build tools, no server required | 
+
+### Colab Notebook 
+| Technology | Goal | 
+|-----------|---------| 
+| **LangChain** | RAG pipeline framework | 
+| **pdfplumber** | PDF text extraction | 
+| **FAISS** | Vector store for baseline RAG | 
+| **HuggingFace Embeddings** | `sentence-transformers/all-MiniLM-L6-v2` | 
 | **LangChain-Groq** | Groq LLM integration |
-
 ---
 
-## 📊 Cost Comparison
-
-| Metric | Baseline RAG | Context Pruning |
-|--------|-------------|----------------|
-| Tokens per query | ~40,000 | ~3,000 |
-| Data per query | ~160 KB | ~12 KB |
-| Cost per query | ~0.018 | ~0.00139 |
+## 📊 Cost Comparison Metric 
+| Baseline RAG | Context Pruning | 
+|--------|-------------|----------------| 
+| Tokens per query | ~40,000 | ~3,000 | 
+| Data per query | ~160 KB | ~12 KB | 
+| Cost per query | ~0.0018 | ~0.00017 | 
 | **Token reduction** | — | **85–92%** |
 
+
 ---
 
-## 📁 Repository Structure
-
-```
-vidya/
-├── index.html      ← Complete web app (single file, open in browser)
-├── context_pruning_rag.ipynb ← Google Colab notebook with cost comparison
-└── README.md
-```
+## 📁 Repository ConfigurationThe entire online application (one file, open in browser) may be found at vidya/
+-> education_tutor.html.
+-> context_pruning_rag.ipynb Google Colab laptop with price comparison
+->README.md ```
+->requirements.txt
 
 ---
 
 ## 🌐 Why 2G-Friendly?
 
-- **Setup OCR** happens once (ideally on WiFi) — ~1–2 minutes
-- **Every query after setup** sends only ~4–6 KB of plain text to Groq
-- No images are transmitted at query time
-- A 2G connection (50–100 kbps) handles 4–6 KB in under 1 second
+It takes about one to two minutes to set up OCR (preferably over WiFi).
+After setup, each query merely transmits about 4–6 KB of plain text to Groq.
+At query time, no images are sent.
+4-6 KB can be handled in less than a second with a 2G connection (50–100 kbps).
+---
+
+## 🔑 Obtaining a Groq API Key
+
+1. Visit [console.groq.com](https://console.groq.com)
+2. Create a free account
+3. Select **API Keys** → **Create API Key**.
+4. Make a copy of the key (beginning with `gsk_...`).
+5. Paste it into the notepad or the web application.
+
+For hundreds of searches, Groq's free tier is adequate. Paste it into the web app or the notebook
 
 ---
 
-## 🔑 Getting a Groq API Key
 
-1. Go to [console.groq.com](https://console.groq.com)
-2. Sign up for a free account
-3. Navigate to **API Keys** → **Create API Key**
-4. Copy the key (starts with `gsk_...`)
-5. Paste it into the web app or the notebook
 
-Groq's free tier is sufficient for hundreds of queries.
 
----
-
-## 📖 How Context Pruning Scores Chapters
-
-```python
-for each chapter:
+## 📖 How Chapters Are Scored by Context Pruning
+Python 
+for every chapter: 
     score = 0
-    for each keyword in question (words > 3 chars):
-        if keyword in chapter_title:  score += 3  # strong signal
-        if keyword in chapter_text:   score += 1  # weaker signal
+    for every keyword in question (words longer than three characters):
+        if keyword in chapter_title: score += 3 #strong signal 
+        if keyword in chapter_text: score += 1 #weaker signal
 
-select top 2 chapters by score
-prune all others
-```
-
-This runs entirely in JavaScript (web app) or Python (notebook) — no extra API call needed for pruning.
+Choose the top two chapters based on score, then discard the rest.
+This is fully implemented in Python (notebook) or JavaScript (web application); no further API calls are required for trimming.
 
 ---
 
