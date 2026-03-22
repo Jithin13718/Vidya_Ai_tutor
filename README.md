@@ -12,20 +12,12 @@ Vidya is a two-part project:
 | `index.html` | A single-file web application that allows you to upload any PDF text---
 |'context_purning_rag.ipynb'| A google colab will implement the this file that is ragpipeline with cost comparison|
 ---
-## 🧠 The Core Technique: Context Pruning
+## The Fundamental Method: Context Pruning
 
-Standard RAG sends the entire book as context on every query. **Context Pruning** identifies relevant chapters first, then sends only those — cutting tokens by 85–92%.
+For each question, Standard RAG gives the full book as context. **Context Pruning** reduces tokens by 85–92% by first identifying pertinent chapters and then sending only those.
+Each chapter is scored by keyword match (no API call) based on the student question and context pruning.
+Only one or two of the thirteen chapters are relevant. Groq LLM obtains about 3,000 tokens instead of over 40,000. The answer comes from your actual textbook.
 
-```
-Student Question
-      ↓
-Context Pruning  ← scores each chapter by keyword match (no API call)
-      ↓
-Relevant Chapter(s) Only  ← 1-2 chapters instead of all 13
-      ↓
-Groq LLM  ← receives ~3,000 tokens instead of ~40,000
-      ↓
-Answer from your actual textbook
 ---
 
 ## 🚀 How to Use
